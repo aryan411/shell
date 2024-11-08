@@ -1,0 +1,20 @@
+<header class="header">
+  <!-- Left: Company Logo -->
+  <div class="logo">
+    <img src="assets/logoipsum.svg" alt="Company Logo" />
+  </div>
+
+  <!-- Right: Navigation Links, Cart Icon, and User Profile Icon -->
+  <nav class="nav-links">
+    <a routerLink="/">Home</a>
+
+
+    <!-- Profile Icon (conditionally displayed if logged in) -->
+    <ng-container *ngIf="isLoggedIn">
+      <div (click)="logout()" class="profile-icon">
+        Logout
+        <fa-icon [icon]="faProfile"> Logout</fa-icon>
+      </div>
+    </ng-container>
+  </nav>
+</header>
